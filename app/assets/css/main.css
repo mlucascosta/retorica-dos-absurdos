@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: retorica --default;
+  logs: false;
+}
+@import "./theme.css";
+
+@import "@fontsource-variable/source-serif-4/index.css";
+@import "@fontsource-variable/source-serif-4/wght-italic.css";
+@import "@fontsource-variable/source-sans-3/index.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+
+@layer base {
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--color-link);
+    text-underline-offset: 2px;
+  }
+
+  a:hover {
+    color: #222;
+  }
+
+  :focus-visible {
+    outline: 2px solid #222;
+    outline-offset: 2px;
+  }
+}
+
+/* Texto corrido das páginas institucionais e do diário */
+.prosa {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.prosa h2 {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 1.6em 0 .5em;
+}
+
+.prosa h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin: 1.4em 0 .4em;
+}
+
+.prosa p,
+.prosa ul,
+.prosa ol {
+  margin: 0 0 1em;
+}
+
+.prosa ul,
+.prosa ol {
+  padding-left: 1.3em;
+}
+
+.prosa ul {
+  list-style: disc;
+}
+
+.prosa ol {
+  list-style: decimal;
+}
+
+.prosa li {
+  margin: .25em 0;
+}
+
+.prosa blockquote {
+  border-left: 4px solid #00a699;
+  padding-left: 16px;
+  color: #484848;
+  margin: 1.2em 0;
+}
+
+.prosa code {
+  font-family: var(--font-mono);
+  font-size: .85em;
+  background: #f7f7f7;
+  padding: .1em .35em;
+  border-radius: .3em;
+}
+
+.prosa a {
+  text-decoration: underline;
+}
+
+/* O Nuxt Content transforma títulos em âncoras; elas não devem parecer links. */
+.prosa :is(h2, h3, h4) a {
+  color: inherit;
+  text-decoration: none;
+}

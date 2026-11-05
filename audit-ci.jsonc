@@ -1,0 +1,15 @@
+{
+  "$schema": "https://github.com/IBM/audit-ci/raw/main/docs/schema.json",
+  // Reprova o CI com qualquer vulnerabilidade alta ou crítica em dependências de produção.
+  "high": true,
+  "skip-dev": true,
+  // Exceções: cada uma com motivo e data de revisão. Remover assim que houver correção.
+  "allowlist": [
+    // zod < 4.6.6: consumo de memória ao validar coleções enormes.
+    // Vem do @nuxt/content, que exige zod 3 (sem versão 3.x corrigida).
+    // Exposição: o zod só valida o frontmatter dos markdowns do próprio repositório,
+    // no build. Nenhuma entrada de leitor passa por ele.
+    // Revisar: a cada atualização do @nuxt/content. Registrado em 2026-11-05.
+    "GHSA-mrhx-c7xc-m3w5"
+  ]
+}

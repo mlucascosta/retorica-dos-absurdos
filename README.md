@@ -14,7 +14,7 @@ Não estão aqui, nem nunca estarão: pautas, rascunhos, alvos em estudo, peças
 
 ## Stack
 
-- [Nuxt 4](https://nuxt.com) na [Vercel](https://vercel.com)
+- [Nuxt 4](https://nuxt.com) na [Vercel](https://vercel.com), Tailwind CSS 4 + daisyUI 5 (tema em `app/assets/css/theme.css`)
 - Node.js 26 LTS (`engines.node: 26.x`; `.nvmrc` para desenvolvimento local)
 - [Supabase](https://supabase.com) (Postgres com RLS, Auth, Storage) a partir do M1
 
