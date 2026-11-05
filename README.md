@@ -46,6 +46,8 @@ npm run build
 | `release/vX.Y.Z` | fechamento de versão, sai de `develop`, entra em `main` e `develop` | preview protegido |
 | `hotfix/vX.Y.Z` | correção urgente, sai de `main`, entra em `main` e `develop` | preview protegido |
 
+Toda mudança relevante entra em [`CHANGELOG.md`](CHANGELOG.md), na seção [Não lançado]; o `release/*` move essas linhas para a versão nova.
+
 Commits seguem [Conventional Commits](https://www.conventionalcommits.org/pt-br/) (`feat:`, `fix:`, `docs:`, `chore:`).
 
 ## Segurança
