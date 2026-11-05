@@ -1,0 +1,58 @@
+/*
+ * CONTRATO VISUAL — tema daisyUI "retorica"
+ * Origem: theme.css do projeto no Claude Design (mockups 01–03, out/2026).
+ * Este arquivo é a única fonte das cores, raios e fontes do site.
+ * Mudanças de identidade visual acontecem aqui, não nos componentes.
+ *
+ * Desvios do design, todos por acessibilidade (WCAG 2.2 AA, texto normal ≥ 4,5:1):
+ *   --color-primary         #ff385c → #e31c5f  (branco sobre #ff385c = 3,52; sobre #e31c5f = 4,57).
+ *                           Afeta o selo SÁTIRA, que precisa ser legível em qualquer tela.
+ *                           #ff385c continua disponível como --color-rausch para elementos grandes.
+ *   --color-secondary-content, --color-accent-content, --color-info-content
+ *                           branco → #222222 (branco sobre esses fundos fica entre 3,0 e 3,3).
+ * O teste tests/tema.test.ts recalcula esses contrastes a cada PR.
+ */
+@plugin "daisyui/theme" {
+  name: "retorica";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #ffffff;
+  --color-base-200: #f7f7f7;
+  --color-base-300: #ebebeb;
+  --color-base-content: #222222;
+  --color-primary: #e31c5f;
+  --color-primary-content: #ffffff;
+  --color-secondary: #00a699;
+  --color-secondary-content: #222222;
+  --color-accent: #fc642d;
+  --color-accent-content: #222222;
+  --color-neutral: #222222;
+  --color-neutral-content: #ffffff;
+  --color-info: #428bff;
+  --color-info-content: #222222;
+  --color-success: #008a05;
+  --color-success-content: #ffffff;
+  --color-warning: #ffb400;
+  --color-warning-content: #222222;
+  --color-error: #c13515;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 2rem;
+  --radius-field: .5rem;
+  --radius-box: 1rem;
+  --size-selector: .25rem;
+  --size-field: .25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@theme {
+  --color-rausch: #ff385c;
+  --color-link: #e31c5f;
+  --font-serif: 'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif;
+  --font-sans: 'Source Sans 3 Variable', 'Source Sans 3', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
