@@ -29,7 +29,8 @@ jobs:
       - run: npm test
       - run: npm run verificar:diario
       - run: npm run build
-      - run: npm audit --audit-level=high --omit=dev
+      - name: Auditoria de dependências (exceções em audit-ci.jsonc)
+        run: npx audit-ci --config audit-ci.jsonc
 
   segredos:
     name: Varredura de segredos
