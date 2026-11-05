@@ -1,8 +1,8 @@
 name: CI
 
 on:
+  # Todo PR, inclusive os empilhados (feature → feature).
   pull_request:
-    branches: [develop, main]
   push:
     branches: [develop, main]
 
