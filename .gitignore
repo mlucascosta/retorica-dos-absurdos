@@ -1,0 +1,44 @@
+# Dependências e builds
+node_modules/
+.nuxt/
+.output/
+.data/
+.nitro/
+.cache/
+dist/
+.vercel/
+coverage/
+playwright-report/
+test-results/
+
+# Ambiente e segredos: nunca versionar
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.age
+supabase/.temp/
+supabase/.branches/
+
+# Dumps de banco: nunca versionar
+*.sql.gz
+*.dump
+*.backup
+backup*/
+dumps/
+
+# Material interno (vai para o repositório privado)
+*.pdf
+private/
+interno/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/*
+!.vscode/extensions.json
