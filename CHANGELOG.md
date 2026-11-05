@@ -22,7 +22,7 @@ Este arquivo registra o que mudou no **código**. Decisões editoriais (pautas, 
 
 ## [0.1.0] — M0 · Fundação
 
-Ainda não publicado em produção: aguarda o merge do PR #1 e a ligação da Vercel com o GitHub.
+Em `develop` desde o PR #1. Vai para produção pelo PR #3 (`develop` → `main`), depois da ligação da Vercel com o GitHub.
 
 ### Adicionado
 
@@ -39,5 +39,5 @@ Ainda não publicado em produção: aguarda o merge do PR #1 e a ligação da Ve
 
 - Cor do selo SÁTIRA e dos botões de `#ff385c` para `#e31c5f`, e texto escuro sobre secondary, accent e info, por contraste (ADR 0002).
 
-[Não lançado]: https://github.com/mlucascosta/retorica-dos-absurdos/compare/develop...feature/m1-dados
+[Não lançado]: https://github.com/mlucascosta/retorica-dos-absurdos/compare/main...develop
 [0.1.0]: https://github.com/mlucascosta/retorica-dos-absurdos/pull/1
